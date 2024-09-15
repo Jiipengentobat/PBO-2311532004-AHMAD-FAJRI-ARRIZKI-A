@@ -94,7 +94,7 @@ public class Desain extends JFrame {
         btnNewButton.setBounds(187, 298, 85, 21);
         contentPane.add(btnNewButton);
         
-        JLabel lblNewLabel_2 = new JLabel("malas nyuci?? sama anjay");
+        JLabel lblNewLabel_2 = new JLabel("malas nyuci?? antar kesini");
         lblNewLabel_2.setFont(new Font("STXinwei", Font.BOLD | Font.ITALIC, 15));
         lblNewLabel_2.setBounds(134, 86, 181, 29);
         contentPane.add(lblNewLabel_2);
