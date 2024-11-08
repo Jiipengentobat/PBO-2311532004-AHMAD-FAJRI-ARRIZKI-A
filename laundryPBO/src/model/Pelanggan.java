@@ -1,7 +1,7 @@
 package model;
 
 public class Pelanggan {
-	String id, nama, alamat, noHP;
+	String id, nama, alamat, nohp;
 
 	public String getId() {
 		return id;
@@ -27,12 +27,14 @@ public class Pelanggan {
 		this.alamat = alamat;
 	}
 
-	public String getNoHP() {
-		return noHP;
+	public String getNohp() {
+		return nohp;
 	}
 
-	public void setNoHP(String noHP) {
-		this.noHP = noHP;
+	public void setNohp(String nohp) {
+		this.nohp = nohp;
 	}
+	
+	
 
 }

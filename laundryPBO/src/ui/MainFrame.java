@@ -8,10 +8,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
-import java.awt.SystemColor;
-import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class MainFrame extends JFrame {
 
@@ -46,54 +45,86 @@ public class MainFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnService = new JButton("Service");
-		btnService.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnService.setBounds(246, 102, 134, 91);
-		contentPane.add(btnService);
-		
-		JButton btnOrder = new JButton("Order");
-		btnOrder.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnOrder.setBounds(57, 102, 134, 91);
-		contentPane.add(btnOrder);
-		
-		JButton btncustomer = new JButton("Customer");
-		btncustomer.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btncustomer.setBounds(439, 102, 134, 91);
-		contentPane.add(btncustomer);
-		
-		JButton btnUser = new JButton("User");
-		btnUser.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnUser.setBounds(57, 251, 134, 91);
-		contentPane.add(btnUser);
-		
-		JButton btnLaporan = new JButton("Laporan");
-		btnLaporan.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnLaporan.setBounds(246, 251, 134, 91);
-		contentPane.add(btnLaporan);
-		
-		JButton btnProfile = new JButton("Profile");
-		btnProfile.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnProfile.setBounds(439, 251, 134, 91);
-		contentPane.add(btnProfile);
-		
-		JButton btnLogOut = new JButton("Log Out");
-		btnLogOut.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Desain frame = new Desain();
-                frame.setVisible(true);
-                dispose();
-			}
-		});
-		btnLogOut.setBounds(223, 388, 184, 41);
-		contentPane.add(btnLogOut);
-		
-		
-		
-		JLabel lblNewLabel = new JLabel("Laundry Gacor ");
-		lblNewLabel.setForeground(new Color(255, 0, 0));
+		JLabel lblNewLabel = new JLabel("Laundry Gacor");
+		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Yu Gothic", Font.ITALIC, 31));
 		lblNewLabel.setBounds(57, 41, 251, 51);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Pesanan");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				OrderFrame order = new OrderFrame();
+				order.setVisible(true);
+				order.loadTable();
+				
+			}
+		});
+		btnNewButton.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton.setBounds(57, 102, 134, 91);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Layanan");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ServiceFrame service = new ServiceFrame();
+				service.setVisible(true);
+				service.loadTable();
+			}
+		});
+		btnNewButton_1.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton_1.setBounds(246, 102, 134, 91);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_1_1 = new JButton("Pelanggan");
+		btnNewButton_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CustomerFrame costumer = new CustomerFrame();
+				costumer.setVisible(true);
+				costumer.loadTable();
+				
+			}
+		});
+		btnNewButton_1_1.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton_1_1.setBounds(439, 102, 134, 91);
+		contentPane.add(btnNewButton_1_1);
+		
+		JButton btnNewButton_2 = new JButton("Pengguna");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				UserFrame user = new UserFrame();
+				user.setVisible(true);
+				user.loadTable();
+			}
+			
+		});
+		btnNewButton_2.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton_2.setBounds(57, 251, 134, 91);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_1_2 = new JButton("Laporan");
+		btnNewButton_1_2.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton_1_2.setBounds(246, 251, 134, 91);
+		contentPane.add(btnNewButton_1_2);
+		
+		JButton btnNewButton_1_1_1 = new JButton("Profile");
+		btnNewButton_1_1_1.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton_1_1_1.setBounds(439, 251, 134, 91);
+		contentPane.add(btnNewButton_1_1_1);
+		
+		JButton btnNewButton_2_1 = new JButton("Keluar");
+		btnNewButton_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LoginFrame login = new LoginFrame();
+				login.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_2_1.setFont(new Font("HP Simplified Jpan Light", Font.PLAIN, 16));
+		btnNewButton_2_1.setBounds(223, 388, 184, 41);
+		contentPane.add(btnNewButton_2_1);
+		
+		
 	}
 
 }
