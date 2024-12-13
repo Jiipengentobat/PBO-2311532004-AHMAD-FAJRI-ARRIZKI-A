@@ -1,40 +1,80 @@
 package model;
 
 public class Pelanggan {
-	String id, nama, alamat, nohp;
+    private String id;
+    private String nama;
+    private String email;
+    private String alamat;
+    private String hp;
 
-	public String getId() {
-		return id;
-	}
+    // Konstruktor tetap protected atau public
+    public Pelanggan(String id, String nama, String email, String alamat, String hp) {
+        this.id = id;
+        this.nama = nama;
+        this.email = email;
+        this.alamat = alamat;
+        this.hp = hp;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getNama() {
-		return nama;
-	}
+    public void setId(String id) {  // Menambahkan setter untuk ID
+        this.id = id;
+    }
 
-	public void setNama(String nama) {
-		this.nama = nama;
-	}
+    public String getNama() {
+        return nama;
+    }
 
-	public String getAlamat() {
-		return alamat;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setAlamat(String alamat) {
-		this.alamat = alamat;
-	}
+    public String getAlamat() {
+        return alamat;
+    }
 
-	public String getNohp() {
-		return nohp;
-	}
+    public String getHp() {
+        return hp;
+    }
 
-	public void setNohp(String nohp) {
-		this.nohp = nohp;
-	}
-	
-	
+    // Inner Builder class
+    public static class Builder {
+        private String id;
+        private String nama;
+        private String email = "";
+        private String alamat;
+        private String hp;
 
+        public Builder setId(String id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setNama(String nama) {
+            this.nama = nama;
+            return this;
+        }
+
+        public Builder setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+
+        public Builder setAlamat(String alamat) {
+            this.alamat = alamat;
+            return this;
+        }
+
+        public Builder setHp(String hp) {
+            this.hp = hp;
+            return this;
+        }
+
+        public Pelanggan build() {
+            return new Pelanggan(id, nama, email, alamat, hp); // Membuat objek Pelanggan
+        }
+    }
 }
